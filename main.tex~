@@ -1,0 +1,132 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Dominik}{Moštěk}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+% \address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+420 728962386}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not want%%%ed
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{mostekdominik@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{http://cz.linkedin.com/in/dominikmostek}
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2013--now}{Bc}{Czech Technical University}{Prague}{\textit{distance education}}{My field of study is Software engineering and management. I am taking distance form of study that takes on day in two weeks.}  % arguments 3 to 6 can be left empty
+\cventry{2005--2009}{Secondary school}{High School of Electrical Engineering}{Praha}{\textit{Graduated}}{My field of study was Information technology, specialization in programming.}  % arguments 3 to 6 can be left 
+
+\section{Experience}
+\cventry{2012--now}{Java developer}{AspectWorks s.r.o}{Praha}{I enterd as an java developer trainee, now i am full time enterprise java developer.
+\newline
+I am also maintaining company blog, twitter and facebook account}{}
+\cventry{2012}{Linux server administrator}{SuperHosting s.r.o}{Praha}{}{I was responsible for installing new servers and resolving issues that occured on the running ones}
+\cventry{Before 2012}{PHP Programmer}{4Stones s.r.o, Firis s.r.o, Inventive Designs, ePortaly.cz}{Praha}{}{I was programming various websites, including eshops.}
+%\subsection{Miscellaneous}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+\section{Languages}
+\cvitemwithcomment{Czech}{Native speaker}{}
+\cvitemwithcomment{English}{Intermediate}{I use English every day at my work. Mostly while reading documentation and IT articles but sometmes also on meetings and conference calls.}
+
+\section{Programming skills}
+\subsection{Languages}
+\cvitem{Java}{I am Oracle Certified Professional and i use Java on daily basis.}
+\cvitem{Groovy}{I am writing my unit test in Groovy.}
+\cvitem{SQL}{I am not professional but i use SQL on daily basis.}
+\cvitem{PHP, Ruby, Python}{I have written websites, tools and various programs using theese languages.}
+\cvitem{\texttt{C++}}{Only occasional usage}
+\subsection{Tools, Frameworks}
+\cvitem{Spring}{I am building most of the java project using spring, spring mvc and other spring frmaeworks.}
+\cvitem{Hibernate, JPA}{I am using JPA as an interface and hibernate as an orm engine on almost all projects.}
+\cvitem{JSF, Primefaces}{I am not a big fan of this projects but used it on two projects.}
+\cvdoubleitem{Build tools}{Maven, Gradle}{Testing frameworks}{Junit, EasyMock}
+\subsection{Metodologies}
+\cvitem{Scrum}{My favorite metodology. Most of project i did was developed using this metodology.}
+\cvitem{Kanban}{Used on two projects so far.}
+\cvitem{eXtreme programming}{I do not stick to all of XP points but to most of them. For example Continuos integration, Test driven development, agility and customer interaction.}
+\subsection{Others}
+\cvitem{Linux}{I am user and big fan of gnu/linux system.}
+\cvitem{Servers}{Tomcat, Apache, MySQL, Postgres}
+%\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+
+
+\section{Project references}
+
+\cvitem{HitHit}{www.hihit.com - crowd-funding server. I was responsible for development of payment system.}
+\cvitem{Orinoco}{Internal software of AspectWorks. It is software for managing company processes (BPM).}
+\cvitem{Jablotron Kruh}{Software for security cars management for company Jablotron.}
+\cvitem{DHL Configuration center}{Configuration center of the DHL integration framework.}
+\cvitem{DHL eBilling}{Software for invoicing and integration with customers.}
+
+\section{Interests}
+\cvitem{}{Programming, Cycling, Weight lifting, Fitness, Tourism, Economics, Politics}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
