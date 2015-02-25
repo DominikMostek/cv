@@ -236,6 +236,8 @@
 % defines one's home page (optional)
 % usage: \homepage{<url>}
 \newcommand*{\homepage}[1]{\def\@homepage{#1}}
+\newcommand*{\github}[1]{\def\@github{#1}}
+\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 % defines additional personal information (optional)
 % usage: \extrainfo{<text>}
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
@@ -265,6 +267,8 @@
 \newcommand*{\faxphonesymbol}{}
 \newcommand*{\emailsymbol}{}
 \newcommand*{\homepagesymbol}{}
+\newcommand*{\githubsymbol}{}
+\newcommand*{\linkedinsymbol}{}
 
 % fonts
 \AtBeginDocument{\normalfont\color{color0}}
