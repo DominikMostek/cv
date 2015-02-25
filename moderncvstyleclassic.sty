@@ -112,18 +112,6 @@
       \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
     \end{tabular}
   }%
-  % optional photo (pre-rendering)
-  \newbox{\makecvtitlepicturebox}%
-  \savebox{\makecvtitlepicturebox}{%
-    \ifthenelse{\isundefined{\@photo}}%
-    {}%
-    {%
-      \hspace*{\separatorcolumnwidth}%
-      \color{color1}%
-      \setlength{\fboxrule}{\@photoframewidth}%
-      \ifdim\@photoframewidth=0pt%
-        \setlength{\fboxsep}{0pt}\fi%
-      \framebox{\includegraphics[width=\@photowidth]{\@photo}}}}%
   % name and title
   \newlength{\makecvtitledetailswidth}\settowidth{\makecvtitledetailswidth}{\usebox{\makecvtitledetailsbox}}%
   \newlength{\makecvtitlepicturewidth}\settowidth{\makecvtitlepicturewidth}{\usebox{\makecvtitlepicturebox}}%
@@ -137,8 +125,6 @@
   \hfill%
   % optional detailed information (rendering)
   \llap{\usebox{\makecvtitledetailsbox}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvtitlenamewidth is forced
-  % optional photo (rendering)
-  \usebox{\makecvtitlepicturebox}\\[2.5em]%
   % optional quote
   \ifthenelse{\isundefined{\@quote}}%
     {}%
