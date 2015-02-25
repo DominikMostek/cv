@@ -515,7 +515,7 @@
 \let\@openbib@code\@empty
 
 % itemize, enumerate and description environment
-\setlength{\leftmargini}   {1em}
+\setlength{\leftmargini}   {0.5em}
 \leftmargin\leftmargini
 \setlength{\leftmarginii}  {\leftmargini}
 \setlength{\leftmarginiii} {\leftmargini}
