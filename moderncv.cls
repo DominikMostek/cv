@@ -29,8 +29,7 @@
   {\RequirePackage{lmodern}}%
   {}
 
-% hyper links (hyperref is loaded at the end of the preamble to pass options required by loaded packages such as CJK)
-\newcommand*\pdfpagemode{UseNone}% do not show thumbnails or bookmarks on opening (on supporting browsers); set \pdfpagemode to "UseOutlines" to show bookmarks
+\newcommand*\pdfpagemode{UseNone} 
 \RequirePackage{url}
 \urlstyle{tt}
 \AtEndPreamble{
@@ -42,8 +41,7 @@
     pdfborder     = 0 0 0,
     pdfpagemode   = \pdfpagemode,
     pdfstartpage  = 1,
-    pdfcreator    = {\LaTeX{} with 'moderncv' package},
-%    pdfproducer   = {\LaTeX{}},% will/should be set automatically to the correct TeX engine used
+    pdfcreator    = {\LaTeX{}},
     bookmarksopen = true,
     bookmarksdepth= 2,% to show sections and subsections
     pdfauthor     = {\@firstname{}~\@lastname{}},
