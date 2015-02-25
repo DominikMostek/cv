@@ -1,48 +1,7 @@
-%% start of file `moderncv.cls'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
-
-%-------------------------------------------------------------------------------
-%                identification
-%-------------------------------------------------------------------------------
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{moderncv}[2013/02/09 v1.3.0 modern curriculum vitae and letter document class]
-
-
-%-------------------------------------------------------------------------------
-%                class options
-%
-% (need to be done before the external package loading, for example because
-% we need \paperwidth, \paperheight and \@ptsize to be defined before loading
-% geometry and fancyhdr)
-%-------------------------------------------------------------------------------
 % paper size option
 \DeclareOption{a4paper}{
   \setlength\paperheight{297mm}
   \setlength\paperwidth{210mm}}
-\DeclareOption{a5paper}{
-  \setlength\paperheight{210mm}
-  \setlength\paperwidth{148mm}}
-\DeclareOption{b5paper}{
-  \setlength\paperheight{250mm}
-  \setlength\paperwidth{176mm}}
-\DeclareOption{letterpaper}{
-  \setlength\paperheight{11in}
-  \setlength\paperwidth{8.5in}}
-\DeclareOption{legalpaper}{
-  \setlength\paperheight{14in}
-  \setlength\paperwidth{8.5in}}
-\DeclareOption{executivepaper}{
-  \setlength\paperheight{10.5in}
-  \setlength\paperwidth{7.25in}}
-\DeclareOption{landscape}{
-  \setlength\@tempdima{\paperheight}
-  \setlength\paperheight{\paperwidth}
-  \setlength\paperwidth{\@tempdima}}
 
 % font size options
 \newcommand\@ptsize{}
@@ -54,61 +13,21 @@
 \DeclareOption{sans}{\AtBeginDocument{\renewcommand{\familydefault}{\sfdefault}}}
 \DeclareOption{roman}{\AtBeginDocument{\renewcommand{\familydefault}{\rmdefault}}}
 
-% draft/final option
-\DeclareOption{draft}{\setlength\overfullrule{5pt}}
-\DeclareOption{final}{\setlength\overfullrule{0pt}}
-
 % execute default options
-\ExecuteOptions{a4paper,11pt,final}
+\ExecuteOptions{a4paper,11pt}
 
 % process given options
 \ProcessOptions\relax
 \input{size1\@ptsize.clo}
 
-
-%-------------------------------------------------------------------------------
-%                required packages
-%-------------------------------------------------------------------------------
-% \AtEndPreamble hook (loading etoolbox instead of defining the macro, as to avoid incompatibilities with etoolbox (and packages relying on it) defining the macro too)
 \RequirePackage{etoolbox}
-%\let\@endpreamblehook\@empty
-%\def\AtEndPreamble{\g@addto@macro\@endpreamblehook}
-%\let\document@original\document
-%\def\document{\endgroup\@endpreamblehook\begingroup\document@original}
-
-% if... then... else... constructs
 \RequirePackage{ifthen}
-% TODO: move to xifthen and \isempty{<arg>} instead of \equal{<arg>}{}
-
-% color
 \RequirePackage{xcolor}
 
-% font loading
-%\RequirePackage{ifxetex,ifluatex}
-%\newif\ifxetexorluatex
-%\ifxetex
-%  \xetexorluatextrue
-%\else
-%  \ifluatex
-%    \xetexorluatextrue
-%  \else
-%    \xetexorluatexfalse
-%  \fi
-%\fi
-% automatic loading of latin modern fonts
-%\ifxetexorluatex
-%  \RequirePackage{fontspec}
-%  \defaultfontfeatures{Ligatures=TeX}
-%  \RequirePackage{unicode-math}
-%  \setmainfont{Latin Modern}
-%  \setsansfont{Latin Modern Sans}
-%  \setmathfont{Latin Modern Math}
-%\else
-  \RequirePackage[T1]{fontenc}
-  \IfFileExists{lmodern.sty}%
-    {\RequirePackage{lmodern}}%
-    {}
-%\fi
+\RequirePackage[T1]{fontenc}
+\IfFileExists{lmodern.sty}%
+  {\RequirePackage{lmodern}}%
+  {}
 
 % hyper links (hyperref is loaded at the end of the preamble to pass options required by loaded packages such as CJK)
 \newcommand*\pdfpagemode{UseNone}% do not show thumbnails or bookmarks on opening (on supporting browsers); set \pdfpagemode to "UseOutlines" to show bookmarks
