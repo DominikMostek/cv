@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
-\newcommand{\company}{Test s.r.o}   
+\newcommand{\company}{Test.s.r.o}   
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -13,7 +14,9 @@ I, the undersigned natural person, hereby grant my consent in connection with th
 
 \vspace{1in}
 \noindent\begin{tabular}{ cc }
-\makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\the\day.\the\month.\the\year}\\
+% use image with signature or line for signature
+% \makebox[2.5in]{\hrulefill} & \makebox[2.5in]{\the\day.\the\month.\the\year}\\
+\makebox[2.5in]{\includegraphics[width=2.5cm,height=2cm]{signature.png}} & \makebox[2.5in]{\the\day.\the\month.\the\year}\\
 Dominik Moštěk & Datum/Date\\[8ex]% adds space between the two sets of signatures
 \end{tabular}
 
